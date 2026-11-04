@@ -1,0 +1,78 @@
+name: Bug report
+description: Something in Ritele doesn't work as described
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't paste licence keys, credentials or customer data — this tracker is public.
+        Security problems go to SECURITY.md, not here.
+  - type: input
+    id: version
+    attributes:
+      label: Ritele version
+      description: From Settings › About in the app, or /healthz on port 8080
+      placeholder: "0.0.36"
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How do you run Ritele?
+      options:
+        - Docker, single container (embedded storage)
+        - Helm chart, embedded storage
+        - Helm chart, bundled Postgres and ClickHouse
+        - Helm chart, my own Postgres and ClickHouse
+        - Air-gapped (offline bundle)
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - System map
+        - Health
+        - Traces
+        - Logs
+        - Metrics
+        - Components
+        - Paths
+        - Drift
+        - Scenarios (what-if)
+        - Snapshots and exports
+        - Scorecard
+        - Advisor
+        - Connect traces
+        - Notifications
+        - Settings
+        - Sign-in, users and SSO
+        - Licence
+        - Install and upgrade
+        - Other
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+  - type: textarea
+    id: telemetry
+    attributes:
+      label: What sends telemetry to Ritele?
+      description: Languages, OpenTelemetry SDK versions, and whether a Collector sits in between
+  - type: textarea
+    id: logs
+    attributes:
+      label: Container logs
+      description: The lines around the problem from the Ritele container. Remove anything sensitive.
+      render: shell

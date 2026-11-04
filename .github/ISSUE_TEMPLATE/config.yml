@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or setup help
+    url: https://github.com/ritele-io/ritele/discussions
+    about: Ask in Discussions so others can find the answer.
+  - name: Security vulnerability
+    url: https://github.com/ritele-io/ritele/security/advisories/new
+    about: Report privately. Please don't open a public issue.
+  - name: Licences and Enterprise
+    url: mailto:sales@ritele.io
+    about: Talk to us about plans and invoices.
