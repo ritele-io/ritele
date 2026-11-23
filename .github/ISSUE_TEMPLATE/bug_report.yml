@@ -34,6 +34,7 @@ body:
       label: Area
       options:
         - System map
+        - How it works
         - Health
         - Traces
         - Logs
@@ -47,6 +48,7 @@ body:
         - Advisor
         - Connect traces
         - Notifications
+        - AI assistants and Ritele Connect
         - Settings
         - Sign-in, users and SSO
         - Licence
