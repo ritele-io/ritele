@@ -34,6 +34,7 @@ body:
       label: Area
       options:
         - System map
+        - Boards
         - How it works
         - Health
         - Traces
